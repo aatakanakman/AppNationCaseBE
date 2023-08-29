@@ -1,6 +1,9 @@
 const express = require('express');
 const userRoutes = require('./routes/user');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./utils/swagger-output.json'); // Oluşturulan Swagger belgesinin yolu
+
 const { Client } = require('pg');
 const cors = require('cors');
 const app = express();
@@ -27,6 +30,8 @@ app.use(bodyParser.json());
 
 // Config
 app.use(cors());
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Hello world endpoint
 app.get('/', (req, res) => {
