@@ -28,6 +28,11 @@ app.use(bodyParser.json());
 // Config
 app.use(cors());
 
+// Hello world endpoint
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
 // Routes
 app.use(
   '/users',
