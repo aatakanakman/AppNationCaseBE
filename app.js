@@ -10,10 +10,10 @@ const app = express();
 
 // PostgreSQL Client
 const client = new Client({
-  user: 'AppNation_pourthinof',
-  host: 'l0u.h.filess.io',
-  database: 'AppNation_pourthinof',
-  password: '4bb51a91ac8dd86e16c321c07467b2f6835a69cd',
+  user: 'newDatabase_certainraw',
+  host: 'yle.h.filess.io',
+  database: 'newDatabase_certainraw',
+  password: '4b8c08c684c156278982f5a517f8883b2d7f0aa1',
   port: '5432',
 });
 
